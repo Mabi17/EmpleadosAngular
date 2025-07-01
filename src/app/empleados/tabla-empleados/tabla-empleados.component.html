@@ -1,0 +1,26 @@
+<div class="justify-content-center d-flex">
+    <table class="table mt-4 w-75">
+        <thead>
+            <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Correo</th>
+      <th scope="col">Teléfono</th>
+      <th scope="col">Fecha Nacimiento</th>
+      <th scope="col">Sexo</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of getEmpleados()">
+        <td>{{item.nEmpleado}}</td>
+        <td>{{item.nombre}}</td>
+        <td>{{item.correo}}</td>
+        <td>{{item.telefono}}</td>
+        <td>{{item.fechaN}}</td>
+        <td>{{item.sexo}}</td>
+      <td><button class="btn btn-outline-danger" (click)="eliminar(item.nEmpleado)">Eliminar</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
